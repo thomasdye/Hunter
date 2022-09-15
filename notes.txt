@@ -1,0 +1,13 @@
+NOTES
+
+remove API checkbox, just make it hidden.
+
+max Willpower = 10
+max HP = 8
+
+HP = Stamina W+ 3
+Willpower = Resolve + Composure
+
+damage types = aggravated or superficial
+
+ROLLS tab - create textbox underneath each new field. Send message button to paste textbox into chat. 
