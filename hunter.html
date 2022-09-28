@@ -1172,6 +1172,14 @@
                 </div>
             </td>
             <td>
+                <input
+                    type="checkbox"
+                    class="sheet-attr"
+                    style="display: none"
+                    checked="checked"
+                    name="attr_Composure_flag"
+                    value="@{composure}"
+                />
                 <h4 data-i18n="composure-u" style="width: 94px">Composure</h4>
             </td>
             <td>
@@ -1250,6 +1258,14 @@
                 </div>
             </td>
             <td>
+                <input
+                    type="checkbox"
+                    class="sheet-attr"
+                    style="display: none"
+                    checked="checked"
+                    name="attr_Resolve_flag"
+                    value="@{resolve}"
+                />
                 <h4 data-i18n="resolve-u" style="width: 94px">Resolve</h4>
             </td>
             <td>
@@ -1344,638 +1360,290 @@
         <tr>
             <!-- Willpower and Touchstones -->
         </tr>
-
+        <div></div>
         <tr>
             <td colspan="3">
-                <h3 style="text-align: center" data-i18n="willpower-u">
+                <h2 style="text-align: center" data-i18n="willpower-u">
                     Willpower
-                </h3>
+                </h2>
             </td>
             <td colspan="3">
-                <h3 style="text-align: center" data-i18n="health-u">Health</h3>
+                <h2 style="text-align: center" data-i18n="health-u">Health</h2>
             </td>
         </tr>
         <!-- Willpower -->
-        <tr>
-            <td colspan="3" align="right" valign="middle">
-                <div style="text-align: center; margin-left: 15px">
-                    <div align="center" class="sheet-health-box">
+        <tr style="height: 40px">
+            <td colspan="3">
+                <div class="sheet-row-willpower" style="text-align: center">
+                    <div style="font-size: 12px">
+                        Current Willpower
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box1"
-                            value="1"
-                            checked="checked"
+                            type="number"
+                            style="background: transparent; border: none"
+                            name="attr_willpower"
+                            value="0"
+                            readonly
                         />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box1"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box1"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box1"
-                            value="3616"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
                     </div>
-                    <div align="center" class="sheet-health-box">
+                    <div class="sheet-row-willpower" style="text-align: center">
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box2"
-                            value="1"
-                            checked="checked"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box2"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box2"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box2"
-                            value="3616"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box3"
-                            value="1"
-                            checked="checked"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box3"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box3"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box3"
-                            value="3616"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box4"
-                            value="1"
-                            checked="checked"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box4"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box4"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box4"
-                            value="3616"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div
-                        align="center"
-                        class="sheet-health-box"
-                        style="margin-right: 5px"
-                    >
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box5"
-                            value="1"
-                            checked="checked"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box5"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box5"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box5"
-                            value="3616"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <span>&nbsp;&nbsp;</span>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box6"
+                            type="hidden"
+                            name="attr_power_hidden_1"
+                            class="power-toggle"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box6"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box6"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box6"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box7"
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_1"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box7"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box7"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box7"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box8"
+                            type="hidden"
+                            name="attr_power_hidden_2"
+                            class="power-toggle"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box8"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box8"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box8"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box9"
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_2"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box9"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box9"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box9"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div
-                        align="center"
-                        class="sheet-health-box"
-                        style="margin-right: 5px"
-                    >
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box10"
+                            type="hidden"
+                            name="attr_power_hidden_3"
+                            class="power-toggle"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box10"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box10"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box10"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    &nbsp;&nbsp;
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box11"
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_3"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box11"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box11"
-                            value="02"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box11"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box12"
+                            type="hidden"
+                            name="attr_power_hidden_4"
+                            class="power-toggle"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box12"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box12"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box12"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box13"
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_4"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box13"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box13"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box13"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box14"
+                            type="hidden"
+                            name="attr_power_hidden_5"
+                            class="power-toggle"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box14"
-                            value="16"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box14"
-                            value="241"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box14"
-                            value="3616"
-                            checked="checked"
-                        />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_willpower-box15"
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_5"
                             value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_willpower-box15"
-                            value="16"
+                            type="hidden"
+                            name="attr_power_hidden_6"
+                            class="power-toggle"
+                            value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_willpower-box15"
-                            value="241"
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_6"
+                            value="1"
                         />
                         <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_willpower-box15"
-                            value="3616"
-                            checked="checked"
+                            type="hidden"
+                            name="attr_power_hidden_7"
+                            class="power-toggle"
+                            value="1"
                         />
-
-                        <span
-                            class="sheet-health-box sheet-no-willpower"
-                        ></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_7"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_power_hidden_8"
+                            class="power-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_8"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_power_hidden_9"
+                            class="power-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_9"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_power_hidden_10"
+                            class="power-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="power"
+                            name="attr_power_check_10"
+                            value="1"
+                        />
                     </div>
                 </div>
             </td>
 
             <!-- Health -->
-            <td colspan="3" align="right" valign="middle">
-                <div style="text-align: center; margin-left: 80px">
-                    <div align="center" class="sheet-health-box">
+            <td colspan="3">
+                <div class="sheet-row-health" style="text-align: center">
+                    <div style="font-size: 12px">
+                        Current Health
+                        <input
+                            type="number"
+                            style="background: transparent; border: none"
+                            name="attr_health"
+                            value="0"
+                            readonly
+                        />
+                    </div>
+                    <div class="sheet-row-health" style="text-align: center">
+                        <input
+                            type="hidden"
+                            name="attr_healing_hidden_1"
+                            class="healing-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="healing"
+                            name="attr_healing_check_1"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_healing_hidden_2"
+                            class="healing-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="healing"
+                            name="attr_healing_check_2"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_healing_hidden_3"
+                            class="healing-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="healing"
+                            name="attr_healing_check_3"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_healing_hidden_4"
+                            class="healing-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="healing"
+                            name="attr_healing_check_4"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_healing_hidden_5"
+                            class="healing-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="healing"
+                            name="attr_healing_check_5"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_healing_hidden_6"
+                            class="healing-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="healing"
+                            name="attr_healing_check_6"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_healing_hidden_7"
+                            class="healing-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="healing"
+                            name="attr_healing_check_7"
+                            value="1"
+                        />
+                        <input
+                            type="hidden"
+                            name="attr_healing_hidden_8"
+                            class="healing-toggle"
+                            value="1"
+                        />
+                        <input
+                            type="checkbox"
+                            style="width: 15px"
+                            class="healing"
+                            name="attr_healing_check_8"
+                            value="1"
+                        />
+                    </div>
+                </div>
+                <br />
+                <!-- Health -->
+                <div style="text-align: center; margin-left: 158px">
+                    <div class="sheet-health-box">
                         <input
                             type="radio"
                             class="sheet-health-box sheet-no-health"
@@ -2001,7 +1669,6 @@
                             name="attr_health-box1"
                             value="3"
                         />
-
                         <span class="sheet-health-box sheet-no-health"></span>
                         <span class="sheet-health-box sheet-bashing-health"
                             >&nbsp;∕&nbsp;</span
@@ -2013,7 +1680,7 @@
                             class="sheet-health-box sheet-aggravated-health"
                         ></span>
                     </div>
-                    <div align="center" class="sheet-health-box">
+                    <div class="sheet-health-box">
                         <input
                             type="radio"
                             class="sheet-health-box sheet-no-health"
@@ -2051,7 +1718,7 @@
                             class="sheet-health-box sheet-aggravated-health"
                         ></span>
                     </div>
-                    <div align="center" class="sheet-health-box">
+                    <div class="sheet-health-box">
                         <input
                             type="radio"
                             class="sheet-health-box sheet-no-health"
@@ -2089,7 +1756,7 @@
                             class="sheet-health-box sheet-aggravated-health"
                         ></span>
                     </div>
-                    <div align="center" class="sheet-health-box">
+                    <div class="sheet-health-box">
                         <input
                             type="radio"
                             class="sheet-health-box sheet-no-health"
@@ -2127,11 +1794,7 @@
                             class="sheet-health-box sheet-aggravated-health"
                         ></span>
                     </div>
-                    <div
-                        align="center"
-                        class="sheet-health-box"
-                        style="margin-right: 5px"
-                    >
+                    <div class="sheet-health-box">
                         <input
                             type="radio"
                             class="sheet-health-box sheet-no-health"
@@ -2169,8 +1832,7 @@
                             class="sheet-health-box sheet-aggravated-health"
                         ></span>
                     </div>
-                    <span>&nbsp;&nbsp;</span>
-                    <div align="center" class="sheet-health-box">
+                    <div class="sheet-health-box">
                         <input
                             type="radio"
                             class="sheet-health-box sheet-no-health"
@@ -2208,7 +1870,7 @@
                             class="sheet-health-box sheet-aggravated-health"
                         ></span>
                     </div>
-                    <div align="center" class="sheet-health-box">
+                    <div class="sheet-health-box">
                         <input
                             type="radio"
                             class="sheet-health-box sheet-no-health"
@@ -2246,7 +1908,7 @@
                             class="sheet-health-box sheet-aggravated-health"
                         ></span>
                     </div>
-                    <div align="center" class="sheet-health-box">
+                    <div class="sheet-health-box">
                         <input
                             type="radio"
                             class="sheet-health-box sheet-no-health"
@@ -2269,277 +1931,6 @@
                             type="radio"
                             class="sheet-health-box sheet-aggravated-health"
                             name="attr_health-box8"
-                            value="3"
-                            checked="checked"
-                        />
-
-                        <span class="sheet-health-box sheet-no-health"></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_health-box9"
-                            value="0"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_health-box9"
-                            value="1"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_health-box9"
-                            value="2"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_health-box9"
-                            value="3"
-                            checked="checked"
-                        />
-
-                        <span class="sheet-health-box sheet-no-health"></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div
-                        align="center"
-                        class="sheet-health-box"
-                        style="margin-right: 5px"
-                    >
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_health-box10"
-                            value="0"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_health-box10"
-                            value="1"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_health-box10"
-                            value="2"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_health-box10"
-                            value="3"
-                            checked="checked"
-                        />
-
-                        <span class="sheet-health-box sheet-no-health"></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    &nbsp;&nbsp;
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_health-box11"
-                            value="0"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_health-box11"
-                            value="1"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_health-box11"
-                            value="02"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_health-box11"
-                            value="3"
-                            checked="checked"
-                        />
-
-                        <span class="sheet-health-box sheet-no-health"></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_health-box12"
-                            value="0"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_health-box12"
-                            value="1"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_health-box12"
-                            value="2"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_health-box12"
-                            value="3"
-                            checked="checked"
-                        />
-
-                        <span class="sheet-health-box sheet-no-health"></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_health-box13"
-                            value="0"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_health-box13"
-                            value="1"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_health-box13"
-                            value="2"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_health-box13"
-                            value="3"
-                            checked="checked"
-                        />
-
-                        <span class="sheet-health-box sheet-no-health"></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_health-box14"
-                            value="0"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_health-box14"
-                            value="1"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_health-box14"
-                            value="2"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_health-box14"
-                            value="3"
-                            checked="checked"
-                        />
-
-                        <span class="sheet-health-box sheet-no-health"></span>
-                        <span class="sheet-health-box sheet-bashing-health"
-                            >&nbsp;∕&nbsp;</span
-                        >
-                        <span class="sheet-health-box sheet-lethal-health"
-                            >☓</span
-                        >
-                        <span
-                            class="sheet-health-box sheet-aggravated-health"
-                        ></span>
-                    </div>
-                    <div align="center" class="sheet-health-box">
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-no-health"
-                            name="attr_health-box15"
-                            value="0"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-bashing-health"
-                            name="attr_health-box15"
-                            value="1"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-lethal-health"
-                            name="attr_health-box15"
-                            value="2"
-                        />
-                        <input
-                            type="radio"
-                            class="sheet-health-box sheet-aggravated-health"
-                            name="attr_health-box15"
                             value="3"
                             checked="checked"
                         />
@@ -2571,7 +1962,7 @@
                         text-align: center;
                     "
                     type="number"
-                    name="attr_maxwp"
+                    name="attr_willpower_max"
                 />
                 <label
                     style="
@@ -2608,7 +1999,7 @@
                     title="Rolls Willpower"
                     type="roll"
                     name="roll_WillpowerRollApi"
-                    value="!vtm will p[[@{willpower-box1} + @{willpower-box2} + @{willpower-box3} + @{willpower-box4} + @{willpower-box5} + @{willpower-box6} + @{willpower-box7} + @{willpower-box8} + @{willpower-box9} + @{willpower-box10} + @{willpower-box11} + @{willpower-box12} + @{willpower-box13} + @{willpower-box14} + @{willpower-box15}]] a0 m?{Modifiers|0} t~Willpower ~ c~@{name} ~"
+                    value="!vtm will p[[@{willpower}]] a0 m?{Modifiers|0} t~Willpower ~ c~@{name} ~"
                 ></button>
                 <button
                     class="sheet-diebutton-simple"
@@ -2635,7 +2026,7 @@
                     <input
                         style="width: 40px"
                         type="number"
-                        name="attr_maxhealth"
+                        name="attr_health_max"
                     />
                 </div>
             </td>
@@ -6038,527 +5429,27 @@
                     name="roll_DProll"
                     value="!vtm skill r@{DesperationCheckbox} a@{CR1Att} s@{CR1Abi} m?{Modifiers|0}t~@{CustomRoll1Name} ~ c~@{name} ~"
                 ></button>
-            </div>
-        </fieldset>
-    </div>
-
-    <table style="width: 834px" class="sheet-auto-style8">
-        <tr>
-            <td
-                class="auto-style3"
-                colspan="6"
-                style="height: 24px"
-                valign="middle"
-            >
-                <hr class="auto-style2 sheet-thin-divide" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6">
-                <div style="text-align: left">
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 200px;
-                            margin: 0 0 2px 0;
-                        "
-                    >
-                        Name
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 110px;
-                            margin: 0 0 0 5px;
-                        "
-                    >
-                        Trait 1
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 45px;
-                            margin: 0 10px 0 0;
-                        "
-                    >
-                        Value
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 110px;
-                            margin: 0 0 0 0;
-                        "
-                    >
-                        Trait 2
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 45px;
-                            margin: 0 5px 0 0;
-                        "
-                    >
-                        Value
-                    </h3>
-                    <h3 style="display: inline-block; width: 70px">
-                        Desperation
-                    </h3>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <div style="width: 834px" class="sheet-auto-style8">
-        <fieldset class="repeating_customroll2">
-            <div style="text-align: left">
-                <input
-                    type="text"
-                    name="attr_CustomRoll2Name"
+                <br />
+                <h3 style="display: inline-block; width: 70px">Description</h3>
+                <br />
+                <textarea
+                    name="attr_CustomRoll1Description"
                     style="
-                        width: 200px;
-                        margin: 0 5px 2px 0;
-                        display: inline-block;
-                    "
-                />
-                <input
-                    type="text"
-                    name="attr_CustomRoll2Trait1"
-                    style="
-                        width: 110px;
+                        width: 400px;
+                        height: 50px;
                         margin: 0 0 2px 0;
                         display: inline-block;
                     "
-                />
-                <input
-                    type="number"
-                    name="attr_CustomRoll2Value1"
-                    style="
-                        width: 40px;
-                        margin: 0 12px 2px 3px;
-                        display: inline-block;
-                        text-align: center;
-                    "
-                />
-                <input
-                    type="text"
-                    name="attr_CustomRoll2Trait2"
-                    style="
-                        width: 110px;
-                        margin: 0 0 2px 0;
-                        display: inline-block;
-                    "
-                />
-                <input
-                    type="number"
-                    name="attr_CustomRoll2Value2"
-                    style="
-                        width: 40px;
-                        margin: 0 10px 2px 2px;
-                        display: inline-block;
-                        text-align: center;
-                    "
-                />
-                <input
-                    type="checkbox"
-                    style="display: inline-block; width: 60px"
-                    name="attr_DesperationCheckbox"
-                    value="@{Desperation}"
-                    unchecked
-                />
+                ></textarea>
                 <button
                     type="roll"
-                    style="display: inline-block; vertical-align: middle"
+                    style="
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin-bottom: 50px;
+                    "
                     name="roll_DProll"
-                    value="!vtm skill r@{DesperationCheckbox} a@{CustomRoll2Value1} s@{CustomRoll2Value2} m?{Modifiers|0}  t~@{CustomRoll2Name} ~ c~@{name} ~"
-                ></button>
-            </div>
-        </fieldset>
-    </div>
-
-    <table style="width: 834px" class="sheet-auto-style8">
-        <tr>
-            <td
-                class="auto-style3"
-                colspan="6"
-                style="height: 24px"
-                valign="middle"
-            >
-                <hr class="auto-style2 sheet-thin-divide" />
-            </td>
-        </tr>
-        <tr>
-            <td>
-                <!--Non-scripted Custom Roll-->
-                <h2 class="auto-style1 sheet-header" style="width: 834px">
-                    NO API SCRIPT CUSTOM ROLLS
-                </h2>
-            </td>
-        </tr>
-
-        <!--Separator-->
-        <tr>
-            <td colspan="6">
-                <hr
-                    class="sheet-auto-style2 sheet-thick-divide"
-                    noshade="noshade"
-                />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6">
-                <div style="text-align: left">
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 200px;
-                            margin: 0 0 2px 0;
-                        "
-                    >
-                        Name
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 110px;
-                            margin: 0 5px 0 5px;
-                        "
-                    >
-                        Trait 1
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 110px;
-                            margin: 0 10px 0 0;
-                        "
-                    >
-                        Trait 2
-                    </h3>
-                    <h3 style="display: inline-block; width: 70px">
-                        Desperation
-                    </h3>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <div style="width: 834px" class="sheet-auto-style8">
-        <fieldset class="repeating_customroll3">
-            <div style="text-align: left">
-                <input
-                    type="text"
-                    name="attr_CustomRoll3Name"
-                    style="
-                        width: 200px;
-                        margin: 0 0 2px 0;
-                        display: inline-block;
-                    "
-                />
-                <select
-                    name="attr_CR3Att"
-                    style="
-                        width: 110px;
-                        margin: 0 5px 0 5px;
-                        display: inline-block;
-                    "
-                >
-                    <option value="0" selected></option>
-                    <option value="@{Strength}" data-i18n="strength-u">
-                        Strength
-                    </option>
-                    <option value="@{Dexterity}" data-i18n="dexterity-u">
-                        Dexterity
-                    </option>
-                    <option value="@{Stamina}" data-i18n="stamina-u">
-                        Stamina
-                    </option>
-                    <option value="@{Charisma}" data-i18n="charisma-u">
-                        Charisma
-                    </option>
-                    <option value="@{Manipulation}" data-i18n="manipulation-u">
-                        Manipulation
-                    </option>
-                    <option value="@{Composure}" data-i18n="composure-u">
-                        Composure
-                    </option>
-                    <option value="@{Intelligence}" data-i18n="intelligence-u">
-                        Intelligence
-                    </option>
-                    <option value="@{Wits}" data-i18n="wits-u">Wits</option>
-                    <option value="@{Resolve}" data-i18n="resolve-u">
-                        Resolve
-                    </option>
-                </select>
-                <select
-                    name="attr_CR3Abi"
-                    style="
-                        width: 110px;
-                        margin: 0 5px 0 0;
-                        display: inline-block;
-                    "
-                >
-                    <option value="0" selected></option>
-                    <option value="@{Strength}" data-i18n="strength-u">
-                        Strength
-                    </option>
-                    <option value="@{Dexterity}" data-i18n="dexterity-u">
-                        Dexterity
-                    </option>
-                    <option value="@{Stamina}" data-i18n="stamina-u">
-                        Stamina
-                    </option>
-                    <option value="@{Charisma}" data-i18n="charisma-u">
-                        Charisma
-                    </option>
-                    <option value="@{Manipulation}" data-i18n="manipulation-u">
-                        Manipulation
-                    </option>
-                    <option value="@{Composure}" data-i18n="composure-u">
-                        Composure
-                    </option>
-                    <option value="@{Intelligence}" data-i18n="intelligence-u">
-                        Intelligence
-                    </option>
-                    <option value="@{Wits}" data-i18n="wits-u">Wits</option>
-                    <option value="@{Resolve}" data-i18n="resolve-u">
-                        Resolve
-                    </option>
-                    <option value="@{Academics}" data-i18n="academics-u">
-                        Academics
-                    </option>
-                    <option value="@{AnimalKen}" data-i18n="animalken-u">
-                        Animal Ken
-                    </option>
-                    <option value="@{Athletics}" data-i18n="athletics-u">
-                        Athletics
-                    </option>
-                    <option value="@{Awareness}" data-i18n="awareness-u">
-                        Awareness
-                    </option>
-                    <option value="@{Brawl}" data-i18n="brawl-u">Brawl</option>
-                    <option value="@{Craft}" data-i18n="craft-u">Craft</option>
-                    <option value="@{Drive}" data-i18n="drive-u">Drive</option>
-                    <option value="@{Etiquette}" data-i18n="etiquette-u">
-                        Etiquette
-                    </option>
-                    <option value="@{Finance}" data-i18n="finance-u">
-                        Finance
-                    </option>
-                    <option value="@{Firearms}" data-i18n="firearms-u">
-                        Firearms
-                    </option>
-                    <option value="@{Insight}" data-i18n="insight-u">
-                        Insight
-                    </option>
-                    <option value="@{Intimidation}" data-i18n="intimidation-u">
-                        Intimidation
-                    </option>
-                    <option
-                        value="@{Investigation}"
-                        data-i18n="investigation-u"
-                    >
-                        Investigation
-                    </option>
-                    <option value="@{Larceny}" data-i18n="larceny-u">
-                        Larceny
-                    </option>
-                    <option value="@{Leadership}" data-i18n="leadership-u">
-                        Leadership
-                    </option>
-                    <option value="@{Medicine}" data-i18n="medicine-u">
-                        Medicine
-                    </option>
-                    <option value="@{Melee}" data-i18n="melee-u">Melee</option>
-                    <option value="@{Occult}" data-i18n="occult-u">
-                        Occult
-                    </option>
-                    <option value="@{Performance}" data-i18n="performance-u">
-                        Performance
-                    </option>
-                    <option value="@{Persuasion}" data-i18n="persuasion-u">
-                        Persuasion
-                    </option>
-                    <option value="@{Politics}" data-i18n="politics-u">
-                        Politics
-                    </option>
-                    <option value="@{Science}" data-i18n="science-u">
-                        Science
-                    </option>
-                    <option value="@{Stealth}" data-i18n="stealth-u">
-                        Stealth
-                    </option>
-                    <option value="@{Streetwise}" data-i18n="streetwise-u">
-                        Streetwise
-                    </option>
-                    <option value="@{Subterfuge}" data-i18n="subterfuge-u">
-                        Subterfuge
-                    </option>
-                    <option value="@{Survival}" data-i18n="survival-u">
-                        Survival
-                    </option>
-                    <option value="@{Technology}" data-i18n="technology-u">
-                        Technology
-                    </option>
-                </select>
-                <input
-                    type="checkbox"
-                    style="display: inline-block; width: 70px"
-                    name="attr_DesperationCheckbox"
-                    value="@{Desperation}"
-                    unchecked
-                />
-                <input
-                    type="checkbox"
-                    style="display: inline-block; width: 120px"
-                    name="attr_BPCheckbox"
-                    value="floor([[@{BloodPotency}]]/2.0)"
-                />
-                <button
-                    type="roll"
-                    title="Non-API Custom Roll"
-                    value="&{template:wod} {{name= @{name}}} {{Rollname=@{CustomRoll3Name}}} {{NormalSuccesses=[[ [[(((@{CR3Att} + @{CR3Abi} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox}) + abs(@{CR3Att} + @{CR3Abi} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox})) / 2)]]d10>6]]}} {{DesperationSuccesses=[[ [[(((@{CR3Att} + @{CR3Abi} + @{BPCheckbox} + ?{Modifier|0} + @{DesperationCheckbox}) - abs(@{CR3Att} + @{CR3Abi} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox})) / 2)]]d10>6]]}} {{NormalDice=[[(((@{CR3Att} + @{CR3Abi} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox}) + abs(@{CR3Att} + @{CR3Abi} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox})) / 2)]]}} {{DesperationDice=[[(((@{CR3Att} + @{CR3Abi} + @{BPCheckbox} + ?{Modifier|0} + @{DesperationCheckbox}) - abs(@{CR3Att} + @{CR3Abi} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox})) / 2)]]}}"
-                    name="roll_custom1InlineDice"
-                ></button>
-            </div>
-        </fieldset>
-    </div>
-
-    <table style="width: 834px" class="sheet-auto-style8">
-        <tr>
-            <td
-                class="auto-style3"
-                colspan="6"
-                style="height: 24px"
-                valign="middle"
-            >
-                <hr class="auto-style2 sheet-thin-divide" />
-            </td>
-        </tr>
-        <tr>
-            <td colspan="6">
-                <div style="text-align: left">
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 200px;
-                            margin: 0 0 2px 0;
-                        "
-                    >
-                        Name
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 110px;
-                            margin: 0 0 0 5px;
-                        "
-                    >
-                        Trait 1
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 45px;
-                            margin: 0 10px 0 0;
-                        "
-                    >
-                        Value
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 110px;
-                            margin: 0 0 0 0;
-                        "
-                    >
-                        Trait 2
-                    </h3>
-                    <h3
-                        style="
-                            display: inline-block;
-                            width: 45px;
-                            margin: 0 5px 0 0;
-                        "
-                    >
-                        Value
-                    </h3>
-                    <h3 style="display: inline-block; width: 70px">
-                        Desperation
-                    </h3>
-                </div>
-            </td>
-        </tr>
-    </table>
-
-    <div style="width: 834px" class="sheet-auto-style8">
-        <fieldset class="repeating_customroll4">
-            <div style="text-align: left">
-                <input
-                    type="text"
-                    name="attr_CustomRoll4Name"
-                    style="
-                        width: 200px;
-                        margin: 0 5px 2px 0;
-                        display: inline-block;
-                    "
-                />
-                <input
-                    type="text"
-                    name="attr_CustomRoll4Trait1"
-                    style="
-                        width: 110px;
-                        margin: 0 0 2px 0;
-                        display: inline-block;
-                    "
-                />
-                <input
-                    type="number"
-                    name="attr_CustomRoll4Value1"
-                    style="
-                        width: 40px;
-                        margin: 0 12px 2px 3px;
-                        display: inline-block;
-                        text-align: center;
-                    "
-                />
-                <input
-                    type="text"
-                    name="attr_CustomRoll4Trait2"
-                    style="
-                        width: 110px;
-                        margin: 0 0 2px 0;
-                        display: inline-block;
-                    "
-                />
-                <input
-                    type="number"
-                    name="attr_CustomRoll4Value2"
-                    style="
-                        width: 40px;
-                        margin: 0 10px 2px 2px;
-                        display: inline-block;
-                        text-align: center;
-                    "
-                />
-                <input
-                    type="checkbox"
-                    style="display: inline-block; width: 60px"
-                    name="attr_DesperationCheckbox"
-                    value="@{Desperation}"
-                    unchecked
-                />
-                <input
-                    type="checkbox"
-                    style="display: inline-block; width: 120px"
-                    name="attr_BPCheckbox"
-                    value="floor([[@{BloodPotency}]]/2.0)"
-                />
-                <button
-                    type="roll"
-                    title="Non-API Custom Roll"
-                    value="&{template:wod} {{name= @{name}}} {{Rollname=@{CustomRoll4Name}}} {{NormalSuccesses=[[ [[(((@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox}) + abs(@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox})) / 2)]]d10>6 ]]}} {{DesperationSuccesses=[[ [[(((@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} + @{DesperationCheckbox}) - abs(@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox})) / 2)]]d10>6]]}} {{NormalDice=[[(((@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox}) + abs(@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox})) / 2)]]}} {{DesperationDice=[[(((@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} + @{DesperationCheckbox}) - abs(@{CustomRoll4Value1} + @{CustomRoll4Value2} + @{BPCheckbox} + ?{Modifier|0} - @{DesperationCheckbox})) / 2)]]}}"
-                    name="roll_custom2InlineDice"
+                    value="@{CustomRoll1Name} - @{CustomRoll1Description}"
                 ></button>
             </div>
         </fieldset>
@@ -7302,3 +6193,99 @@
     </table>
     {{Reroll}}
 </rolltemplate>
+
+<script type="text/worker">
+    // ==== UTILITY FUNCTIONS ====
+    const int = (score, fallback = 0) => parseInt(score) || fallback;
+    const float = (score, fallback = 0) => parseFloat(score) || fallback;
+    const numbers = (num, from = 0) => Array.from(Array(num).keys(), n => n + from);
+    const sum = values => values.reduce((total, one) => total + int(one) , 0);
+    const changes = (stats, prefix = '') => stats.reduce((text, stat) => `${text} change:${prefix}${stat}`, '');
+
+    // ==== SHEET WORKERS ====
+
+    <!-- Willpower -->
+
+    const willpower_boxes = numbers(10, 1);
+
+    on(changes(willpower_boxes, 'power_check_'), event => {
+        if (event.sourceType != 'player') return;
+        getAttrs(willpower_boxes.map(w => `power_check_${w}`), v => {
+            const willpower = sum(Object.values(v));
+            setAttrs({willpower});
+        });
+    });
+
+    on('change:willpower', () => {
+        getAttrs(['willpower', 'willpower_max'], v => {
+            const willpower_max = int(v.willpower_max);
+            const willpower = int(v.willpower);
+
+            const output = {};
+            output.willpower = (willpower > willpower_max) ? willpower_max : willpower;
+            willpower_boxes.forEach(num => output['power_check_' + num] = (num <= output.willpower) ? 1: 0);
+
+            setAttrs(output);
+        });
+    });
+
+    on('change:resolve change:composure', function(event) {
+        getAttrs(["resolve","composure", "willpower"], function(v) {
+            const willpower_max = Math.min(10, int(v.resolve) + int(v.composure));
+            const willpower = int(v.willpower);
+
+            const old = int(event.previousValue);
+            const newest = int(event.newValue);
+            const change = Math.max(0,newest - old);
+
+            const output = {};
+            willpower_boxes.forEach(num => output['power_hidden_' + num] = (num <= willpower_max) ? 1 : 0);
+            output.willpower_max = willpower_max;
+            output.willpower = willpower + change;
+            setAttrs(output);
+        });
+      });
+
+
+    <!-- Health -->
+
+    const healing_boxes = numbers(8, 1);
+
+    on(changes(healing_boxes, 'healing_check_'), event => {
+        if (event.sourceType != 'player') return;
+        getAttrs(healing_boxes.map(w => `healing_check_${w}`), v => {
+            const health = sum(Object.values(v));
+            setAttrs({health});
+        });
+    });
+
+    on('change:health', () => {
+        getAttrs(['health', 'health_max'], v => {
+            const health_max = int(v.health_max);
+            const health = int(v.health);
+
+            const output = {};
+            output.health = (health > health_max) ? health_max : health;
+            healing_boxes.forEach(num => output['healing_check_' + num] = (num <= output.health) ? 1: 0);
+
+            setAttrs(output);
+        });
+    });
+
+    on('change:stamina', function(event) {
+        getAttrs(["stamina", "health"], function(v) {
+            const health_max = Math.min(8, (int(v.stamina) + 3));
+            const health = int(v.health);
+
+            const old = int(event.previousValue);
+            const newest = int(event.newValue);
+            const change = Math.max(0,newest - old);
+
+            const output = {};
+            healing_boxes.forEach(num => output['healing_hidden_' + num] = (num <= health_max) ? 1 : 0);
+            output.health_max = health_max;
+            output.health = health + change;
+            setAttrs(output);
+        });
+      });
+</script>

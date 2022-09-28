@@ -1,3 +1,25 @@
+input[type="hidden"].power-toggle:not([value="1"]) + input[type="checkbox"].power {
+    display: none;
+}
+
+input[type="hidden"].healing-toggle:not([value="1"]) + input[type="checkbox"].healing {
+    display: none;
+}
+
+.sheet-row-willpower input[type="checkbox"] {
+    accent-color: green;
+}
+
+.sheet-row-health input[type="checkbox"] {
+    accent-color: red;
+}
+
+
+button {
+    background: transparent;
+}
+
+
 .charsheet label {
     display: inline-block;
     width: 75px;
@@ -24,10 +46,10 @@ input.sheet-defaultCheckBox
 {
     position: absolute;
     opacity: 0;
-    width:15px;
+    width:12px;
     cursor: pointer;
     z-index: 1;
-    margin-top: 6px;
+    margin-top: 0px;
 }
 
 /* Styles common to fake dot and checkbox */
@@ -359,8 +381,8 @@ div.sheet-health-box {
 }
 
 input.sheet-health-box {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     position: absolute;
     z-index: 0;
     margin: 0px 0 0 2px;
@@ -369,17 +391,14 @@ input.sheet-health-box {
 }
 
 span.sheet-health-box {
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     margin: 0 0 0 0;
     display: none;
     color:black;
     border: 1px solid black;   
 }
 
-span.sheet-no-health {
-    background-color: rgb(146, 45, 63);
-}
 
 span.sheet-no-willpower {
     background-color: rgb(24, 126, 42);
@@ -389,13 +408,13 @@ input.sheet-no-health { z-index: 2; }
 
 input.sheet-no-health:checked + input.sheet-bashing-health,
 input.sheet-bashing-health:checked + input.sheet-lethal-health,
-input.sheet-lethal-health:checked + input.sheet-aggravated-health { z-index: 3; }
+input.sheet-lethal-health:checked + input.sheet-aggravated-health { z-index: 3; padding-bottom: 3px; }
 
 input.sheet-no-health:checked ~ span.sheet-no-willpower,
 input.sheet-no-health:checked ~ span.sheet-no-health,
 input.sheet-bashing-health:checked ~ span.sheet-bashing-health,
 input.sheet-lethal-health:checked ~ span.sheet-lethal-health,
-input.sheet-aggravated-health:checked ~ span.sheet-aggravated-health { display: inline-block; }
+input.sheet-aggravated-health:checked ~ span.sheet-aggravated-health { display: inline-block; padding-bottom: 3px; }
 
 /* Humanity Radio Buttons */
 div.sheet-humanity-box {
