@@ -6,12 +6,32 @@ input[type="hidden"].healing-toggle:not([value="1"]) + input[type="checkbox"].he
     display: none;
 }
 
-.sheet-row-willpower input[type="checkbox"] {
-    accent-color: green;
+.sheet-row-health input[type="checkbox"] {
+    -webkit-appearance: initial;
+    appearance: initial;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: gray;
+
 }
 
-.sheet-row-health input[type="checkbox"] {
-    accent-color: red;
+.sheet-row-health input[type="checkbox"]:checked {
+    background: red;
+}
+
+.sheet-row-willpower input[type="checkbox"] {
+    -webkit-appearance: initial;
+    appearance: initial;
+    width: 25px;
+    height: 25px;
+    border: none;
+    background: gray;
+
+}
+
+.sheet-row-willpower input[type="checkbox"]:checked {
+    background: green;
 }
 
 
@@ -381,22 +401,24 @@ div.sheet-health-box {
 }
 
 input.sheet-health-box {
-    width: 12px;
-    height: 12px;
+    width: 23px;
+    height: 23px;
     position: absolute;
     z-index: 0;
     margin: 0px 0 0 2px;
     opacity:0;
     cursor: pointer;
+    font-size: 20px;
 }
 
 span.sheet-health-box {
-    width: 12px;
-    height: 12px;
+    width: 23px;
+    height: 23px;
     margin: 0 0 0 0;
     display: none;
     color:black;
-    border: 1px solid black;   
+    border: 1px solid black;
+    font-size: 20px;
 }
 
 
@@ -408,13 +430,13 @@ input.sheet-no-health { z-index: 2; }
 
 input.sheet-no-health:checked + input.sheet-bashing-health,
 input.sheet-bashing-health:checked + input.sheet-lethal-health,
-input.sheet-lethal-health:checked + input.sheet-aggravated-health { z-index: 3; padding-bottom: 3px; }
+input.sheet-lethal-health:checked + input.sheet-aggravated-health { z-index: 3; }
 
 input.sheet-no-health:checked ~ span.sheet-no-willpower,
 input.sheet-no-health:checked ~ span.sheet-no-health,
 input.sheet-bashing-health:checked ~ span.sheet-bashing-health,
 input.sheet-lethal-health:checked ~ span.sheet-lethal-health,
-input.sheet-aggravated-health:checked ~ span.sheet-aggravated-health { display: inline-block; padding-bottom: 3px; }
+input.sheet-aggravated-health:checked ~ span.sheet-aggravated-health { display: inline-block; }
 
 /* Humanity Radio Buttons */
 div.sheet-humanity-box {
